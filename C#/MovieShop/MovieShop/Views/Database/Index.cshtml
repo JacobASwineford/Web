@@ -1,0 +1,106 @@
+﻿@model DatabaseModel
+
+<style>
+  .header {
+    height: 80px;
+    width: 100%;
+    background-color: rgb(170, 44, 12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .sub-header-1, .sub-header-2 {
+    height: 80%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sub-header-1 *, .sub-header-2 * {
+    margin: 5%;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
+
+  .header-image {
+    height: 80%;
+    width: 60px;
+  }
+
+  .header-title {
+    color: black;
+    font-size: 20px;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 80%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.788);
+    height: 30px;
+  }
+
+  tr {
+    height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  }
+
+  thead td {
+    font-size: large;
+    font-weight: bold;
+  }
+
+</style>
+
+<div class="header">
+  <div class="sub-header-1">
+    <img class="header-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcS-j0JPkDGHn2lv9HYscwKEtCvCwqgohXWA&usqp=CAU" alt="no">
+    <p class="header-title">Database</p>
+  </div>
+
+  <form class="sub-header-2" asp-controller="Database" asp-action="Index" method="get">
+    <select name="dbname" id="dbname" title="Database">
+        <option value="" disabled selected>Database</option>
+            @foreach (var str in Model.tables)
+            {
+                <option value="@str">@str</option>
+            }
+    </select>
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<h2 style="margin-left: auto; margin-right: auto;">@Model.dbname</h2>
+<hr style="border-color: black;">
+<table>
+  <thead>
+        @foreach (var header in Model.columns)
+        {
+            <td>@header</td>
+        }
+  </thead>
+  <tr>
+    <td>Data</td>
+    <td>Other Data</td>
+    <td>Looooooong Data</td>
+  </tr>
+  <tr>
+    <td>Data</td>
+    <td>Other Data</td>
+    <td>Looooooong Data</td>
+  </tr>
+  <tr>
+    <td>Data</td>
+    <td>Other Data</td>
+    <td>Looooooong Data</td>
+  </tr>
+</table>
