@@ -1,0 +1,23 @@
+<style>
+    .cast-container {
+        width: 200px;
+        background-color: antiquewhite;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: rgba(0, 0, 0, 0.174);
+    }
+</style>
+
+<div class="cast-container">
+    <h5>Cast</h5>
+    <hr>
+    <div *ngFor="let details of details_list">
+        {{details.name}}
+        <hr>
+    </div>
+</div>

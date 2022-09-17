@@ -1,0 +1,30 @@
+<style>
+    #main-container {
+        flex-direction: column;
+    }
+
+    #sub-container-1 {
+        width: 98%;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #sub-container-2 {
+        margin-top: 10px;
+        justify-content: space-around;
+    }
+</style>
+
+<div id="main-container" class="d-flex" style="flex-direction: column; width: 100%;">
+    <app-movie-title-card [movie]="movie" [id]="id"></app-movie-title-card>
+    <div id="sub-container-2" class="d-flex">
+        <app-movie-facts [movie]="movie"></app-movie-facts>
+        <app-movie-cast-list [id]="id"></app-movie-cast-list>
+    </div>
+</div>
+
+
+
+
+

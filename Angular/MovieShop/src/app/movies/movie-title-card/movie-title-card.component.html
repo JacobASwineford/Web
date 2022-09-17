@@ -1,0 +1,149 @@
+<style>
+    .movie-container {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 96%;
+        border-radius: 10px;
+    }
+
+    .sub-container {
+        display: flex;
+    }
+
+    .movie-image {
+        width: 300px;
+        height: 400px;
+    }
+
+    .information-container {
+        width: 400px;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.938);
+        border: 2px solid black;
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    .tag-container {
+        display: flex;
+    }
+
+    .tag {
+        background-color: gray;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 10px;
+        color: white;
+        padding: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .rating-bad {
+        background-color: rgb(128, 0, 0);
+        color: whitesmoke;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .rating-good {
+        background-color: rgb(206, 179, 1);
+        color: whitesmoke;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .rating-excellent {
+        background-color: rgb(3, 197, 3);
+        color: whitesmoke;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        margin-right: 20px;
+        justify-content: space-between;
+    }
+
+    .stack {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review-button {
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid white;
+        font-size: 20px;
+    }
+
+    .review-button:hover {
+        background-color: blanchedalmond;
+    }
+
+    .buy-button {
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid white;
+        font-size: 20px;
+    }
+
+    .buy-button:hover {
+        background-color: blanchedalmond;
+    }
+
+    .favorite-button {
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid white;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .favorite-button:hover {
+        background-color: blanchedalmond;
+    }
+
+</style>
+
+<div class="movie-container" style="background: url('{{movie?.backdropUrl}}'); background-repeat: none; background-size: auto;">
+    <div class="sub-container">
+        <img [src]="movie?.posterUrl" alt="Image not found!" class="movie-image">
+        <div class="information-container">
+            <h2>{{movie?.title}}</h2>
+            <p>{{movie?.tagline}}</p>
+            <div class="tag-container">
+                {{movie?.runTime}} | {{movie?.createdDate}}
+                <div class="tag" *ngFor="let g of genre">{{g}}</div>
+            </div>
+            <br>
+            <div [class.rating-good]="rating > 5 && rating < 8" [class.rating-bad]="rating < 5" [class.rating-excellent]="rating > 8">{{rating}}</div>
+            <br>
+            <br>
+            <p>{{movie?.overview | summaryLimit}}</p>
+        </div>
+    </div>
+    
+
+    <div class="button-container">
+        <div class="stack">
+            <button class="review-button">Review</button>
+            <button class="buy-button">Buy: ({{movie?.price}})</button>
+        </div>
+        <div>
+            <button class="favorite-button">Favorite</button>
+        </div>
+    </div>
+    
+</div>

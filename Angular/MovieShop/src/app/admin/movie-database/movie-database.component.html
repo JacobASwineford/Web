@@ -1,0 +1,226 @@
+<style>
+    .form-3 {
+        background-color: rgb(175, 175, 175);
+        width: 900px;
+        text-align: center;
+        border: 2px solid rgba(73, 73, 73, 0.562);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    td:first-child {
+        text-align: left;
+    }
+
+    td:last-child {
+        text-align: right;
+    }
+
+
+    .form-2 td:nth-child(2) {
+        text-align: right;
+    }
+
+    .form-3 td:nth-child(2) {
+        text-align: center;
+    }
+
+    .form-3 td:nth-child(3) {
+        text-align: right;
+    }
+
+    td {
+        padding: 10px;
+        border: 2px solid rgba(0, 0, 0, 0.155);
+        width: 300px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    
+</style>
+
+<form class="form-3" #movieForm="ngForm" id="addForm">
+    <h1>Movie Form</h1>
+    <table>
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <button (click)="from()" [disabled]="from_id == 0 || from_id == undefined">From: </button>
+                <input type="text" id="from_id" name="from_id" placeholder="Title..." style="margin-left: 10px;" [(ngModel)]="from_id">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="title">Title</label>
+            </td>
+            <td>
+                <input type="text" id="title" name="title" placeholder="Title..." [(ngModel)]="movie.title" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="overview">Overview</label>
+            </td>
+            <td>
+                <input type="text" id="overview" name="overview" placeholder="Overview..." [(ngModel)]="movie.overview" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tagline">Tagline</label>
+            </td>
+            <td>
+                <input type="text" id="tagline" name="tagline" placeholder="Tagline..." [(ngModel)]="movie.tagline" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="budget">Budget</label>
+            </td>
+            <td>
+                <input type="number" id="budget" name="budget" placeholder="Budget..." [(ngModel)]="movie.budget" step="any" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="revenue">Revenue</label>
+            </td>
+            <td>
+                <input type="number" id="revenue" name="revenue" placeholder="Revenue..." [(ngModel)]="movie.revenue" step="any" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="imdburl">Imdb URL</label>
+            </td>
+            <td>
+                <input type="text" id="imdburl" name="imdbUrl" placeholder="Imdb URL..." [(ngModel)]="movie.imdbUrl" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tmdburl">Tmdb URL</label>
+            </td>
+            <td>
+                <input type="text" id="tmdburl" name="tmdbUrl" placeholder="Tmdb URL..." [(ngModel)]="movie.tmdbUrl" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="posterurl">Poster URL</label>
+            </td>
+            <td>
+                <input type="text" id="posterurl" name="posterUrl" placeholder="Poster URL..." [(ngModel)]="movie.posterUrl" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="backdropurl">Backdrop URL</label>
+            </td>
+            <td>
+                <input type="text" id="backdropurl" name="backdropUrl" placeholder="Bacdrop URL..." [(ngModel)]="movie.backdropUrl" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="originallanguage">Original Language</label>
+            </td>
+            <td>
+                <input type="text" id="originallanguage" name="originalLanguage" placeholder="Original Language..." [(ngModel)]="movie.originalLanguage" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="releasedate">Release Date</label>
+            </td>
+            <td>
+                <input type="date" id="releasedate" name="releaseDate" [(ngModel)]="movie.releaseDate" required>
+            </td>
+            <td>
+                <input type="text" id="releasedate2" name="releaseDate2" placeholder="Release Date..." [(ngModel)]="movie.releaseDate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="runtime">Run Time</label>
+            </td>
+            <td>
+                <input type="number" id="runtime" name="runTime" placeholder="Run Time..." [(ngModel)]="movie.runTime" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="price">Price</label>
+            </td>
+            <td>
+                <input type="number" id="price" name="price" placeholder="Price..." [(ngModel)]="movie.price" step="any" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="createddate">Create Date</label>
+            </td>
+            <td>
+                <input type="date" id="createddate" name="createdDate" [(ngModel)]="movie.createdDate" required>
+            </td>
+            <td>
+                <input type="text" id="createddate2" name="createddate2" placeholder="Created Date..." [(ngModel)]="movie.createdDate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="updateddate">Updated Date</label>
+            </td>
+            <td>
+                <input type="date" id="updateddate" name="updatedDate" [(ngModel)]="movie.updatedDate" required>
+            </td>
+            <td>
+                <input type="text" id="updateddate2" name="updatedDate2" placeholder="Updated Date..." [(ngModel)]="movie.updatedDate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="updatedby">Updated By</label>
+            </td>
+            <td>
+                <input type="text" id="updatedby" name="updatedBy" placeholder="Updated by..." [(ngModel)]="movie.updatedBy"  required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="createdby">Created By</label>
+            </td>
+            <td>
+                <input type="text" id="createdby" name="createdBy" placeholder="Created by..." [(ngModel)]="movie.createdBy" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <button (click)="reset()">Reset</button>
+                <button (click)="add()" style="margin-left: 10px; margin-right: 10px;">Add</button>
+                
+                
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <button (click)="delete()" [disabled]="delete_id == 0 || delete_id == undefined">Delete</button> 
+                <input type="text" name="delete_id" min="0" style="margin-left: 10px;" [(ngModel)]="delete_id">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <button (click)="modify()" [disabled]="modify_id == 0 || modify_id == undefined">Modify</button>
+                <input type="number" name="modify_id" min="0" style="margin-left: 10px;" [(ngModel)]="modify_id">
+            </td>
+        </tr>
+
+    </table>
+</form>

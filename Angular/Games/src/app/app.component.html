@@ -1,0 +1,35 @@
+
+<style>
+  .menu {
+    display: flex;
+    height: 100px;
+    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid rgb(8, 35, 238);
+  }
+
+  .menu a {
+    background-color: beige;
+    text-align: center;
+    align-items: center;
+    padding: .5%;
+    border: 2px solid black;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .menu a:hover {
+    background-color: rgb(202, 76, 202);
+  }
+</style>
+
+<div class="menu">
+  <a routerLink="chess">Chess</a>
+  <a routerLink="checkers">Checkers</a>
+</div>
+<br>
+
+<router-outlet></router-outlet>

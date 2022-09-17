@@ -1,0 +1,33 @@
+<style>
+    .menu {
+      display: flex;
+      height: 100px;
+      background-color: rgb(255, 251, 0);
+      justify-content: space-around;
+      align-items: center;
+      border: 2px solid rgb(8, 35, 238);
+    }
+  
+    .menu a {
+      background-color: rgba(9, 182, 234, 0.771);
+      text-align: center;
+      align-items: center;
+      padding: .5%;
+      border: 2px solid black;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      color: black;
+    }
+  
+    .menu a:hover {
+      background-color: rgb(24, 239, 113);
+    }
+</style>
+
+<div class="menu">
+    <a routerLink="leaderboard">Leaderboard</a>
+</div>
+<br>
+
+<router-outlet></router-outlet>

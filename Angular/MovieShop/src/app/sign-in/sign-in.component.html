@@ -1,0 +1,65 @@
+<style>
+    .form-2 {
+        background-color: rgb(175, 175, 175);
+        width: 600px;
+        text-align: center;
+        border: 2px solid rgba(73, 73, 73, 0.562);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    td:first-child {
+        text-align: left;
+    }
+
+    td:last-child {
+        text-align: right;
+    }
+
+
+    .form-2 td:nth-child(2) {
+        text-align: right;
+    }
+
+    .form-3 td:nth-child(2) {
+        text-align: center;
+    }
+
+    .form-3 td:nth-child(3) {
+        text-align: right;
+    }
+
+    td {
+        padding: 10px;
+        border: 2px solid rgba(0, 0, 0, 0.155);
+        width: 300px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+</style>
+
+<form [formGroup]="signin_form" class="form-2">
+    <table>
+        <tr>
+            <td colspan="2" style="text-align: center;"><h2>Sign In</h2></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="text" id="email" placeholder="Email..." formControlName="email"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="text" id="password" placeholder="Password..." formControlName="password"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button [disabled]="!signin_form.valid" (click)="submit()">Sign In</button>
+            </td>
+        </tr>
+    </table>
+</form>
