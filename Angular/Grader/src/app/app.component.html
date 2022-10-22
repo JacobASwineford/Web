@@ -1,0 +1,77 @@
+<style>
+  h1, h4, h2 {
+    text-align: center;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(241, 25, 25, 0.652);
+    padding: 20px;
+  }
+
+  .student-selection {
+    display: flex;
+    font-size: 22px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(215, 215, 215);
+  }
+
+  .information-box {
+    border-top: 0;
+    border-bottom: 0;
+    border-color: rgb(74, 74, 74);
+    border-style: solid;
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .assignment-box {
+    margin: 20px;
+  }
+
+</style>
+
+<div class="header">
+  <h1>Gradebook</h1>
+  <div>
+    <div class="student-selection">
+      <h3 style="margin: 0px; margin-right: 10px;">Student:</h3>
+      <input list="students" name="students" id="student-selection" [(ngModel)]="studentFullName" style="margin-right: 10px;">
+      <datalist id="students">
+      </datalist>
+      <button type="submit" (click)="squery()">Get</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- List of subjects -->
+<h2>English</h2>
+<div class="container">
+  <div class="information-box">
+    Individual: 
+    <br>
+    Class:
+  </div>
+  <div class="assignment-box">
+    <label for="assignments">Assignments</label>
+    <input list="assignments" name="assignments" id="assignment-selection">
+    <datalist id="assignments">
+      <option value="junk: 1"></option>
+    </datalist>
+  </div>
+  
+</div>
+

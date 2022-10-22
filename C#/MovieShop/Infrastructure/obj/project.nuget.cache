@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uzz6qaGuecC5Q+7+Q+qDSqyw2u68kgm5wKJaoysp3rEMHpJIrZkFK/acg3pq+hxrNdDXCFRXZa5y4g+n0SUm/A==",
+  "dgSpecHash": "oWuZLMv5WaUL9ZlU9wZaAg7hO8HNMtJ8L9vtKVtn2PGyjq9qxGqq1qc4XtYfeKw5jOFY6Xb1XC25+BwOAj/i/Q==",
   "success": true,
-  "projectFilePath": "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrpug\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\mrpug\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

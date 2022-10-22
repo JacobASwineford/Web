@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+fGte51P7TXHnaJ0MC/jZnD4R4sOFbE6VCio8q3hkSJJ6uh44jpDI10gkQCkX775sAJptOawZK4oca9WLCjiXg==",
+  "dgSpecHash": "rR3TgWTYPNoaHHECJdTW92Ltp7mCBEdRO4mcbzUSYLtoegVTcgZc7vg/0onPqJD9k+LpaNn+kmaNcLPBE2ZmYg==",
   "success": true,
-  "projectFilePath": "C:\\C#\\MovieShop\\MovieShop\\MovieShop.csproj",
+  "projectFilePath": "C:\\Code\\Web\\C#\\MovieShop\\MovieShop\\MovieShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrpug\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\mrpug\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

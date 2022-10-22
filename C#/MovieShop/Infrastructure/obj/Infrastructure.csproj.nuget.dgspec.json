@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\C#\\MovieShop\\Core\\Core.csproj": {
+    "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#\\MovieShop\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\C#\\MovieShop\\Core\\Core.csproj",
+        "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\mrpug\\.nuget\\packages\\",
-        "outputPath": "C:\\C#\\MovieShop\\Core\\obj\\",
+        "outputPath": "C:\\Code\\Web\\C#\\MovieShop\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrpug\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -75,14 +75,14 @@
         }
       }
     },
-    "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\mrpug\\.nuget\\packages\\",
-        "outputPath": "C:\\C#\\MovieShop\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrpug\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -99,8 +99,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\C#\\MovieShop\\Core\\Core.csproj": {
-                "projectPath": "C:\\C#\\MovieShop\\Core\\Core.csproj"
+              "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj": {
+                "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj"
               }
             }
           }

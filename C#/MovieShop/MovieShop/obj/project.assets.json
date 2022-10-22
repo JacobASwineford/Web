@@ -6669,11 +6669,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#\\MovieShop\\MovieShop\\MovieShop.csproj",
+      "projectUniqueName": "C:\\Code\\Web\\C#\\MovieShop\\MovieShop\\MovieShop.csproj",
       "projectName": "MovieShop",
-      "projectPath": "C:\\C#\\MovieShop\\MovieShop\\MovieShop.csproj",
+      "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\MovieShop\\MovieShop.csproj",
       "packagesPath": "C:\\Users\\mrpug\\.nuget\\packages\\",
-      "outputPath": "C:\\C#\\MovieShop\\MovieShop\\obj\\",
+      "outputPath": "C:\\Code\\Web\\C#\\MovieShop\\MovieShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mrpug\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6690,8 +6690,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

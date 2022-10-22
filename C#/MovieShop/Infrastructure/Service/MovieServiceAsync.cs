@@ -13,7 +13,7 @@ namespace Infrastructure.Service
     public class MovieServiceAsync : IMovieServiceAsync
     {
 
-        IMovieRepositoryAsync rep;
+        private readonly IMovieRepositoryAsync rep;
 
         public MovieServiceAsync(IMovieRepositoryAsync repo)
 		{
@@ -66,6 +66,7 @@ namespace Infrastructure.Service
             conn.Open();
             string sql = $"";
             conn.Close();
+            return null;
         }
     }
 }

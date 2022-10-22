@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod();
+        builder.AllowAnyOrigin();
     });
 });
 builder.Services.AddSqlServer<MVCDbContext>(builder.Configuration.GetConnectionString("MVC"));

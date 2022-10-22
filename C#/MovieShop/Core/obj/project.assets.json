@@ -4550,11 +4550,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#\\MovieShop\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\C#\\MovieShop\\Core\\Core.csproj",
+      "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\mrpug\\.nuget\\packages\\",
-      "outputPath": "C:\\C#\\MovieShop\\Core\\obj\\",
+      "outputPath": "C:\\Code\\Web\\C#\\MovieShop\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mrpug\\AppData\\Roaming\\NuGet\\NuGet.Config",

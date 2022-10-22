@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C#\\GamesAPI\\Database\\Database.csproj": {}
+    "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj": {}
   },
   "projects": {
-    "C:\\C#\\GamesAPI\\Database\\Database.csproj": {
+    "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#\\GamesAPI\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\C#\\GamesAPI\\Database\\Database.csproj",
+        "projectPath": "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj",
         "packagesPath": "C:\\Users\\mrpug\\.nuget\\packages\\",
-        "outputPath": "C:\\C#\\GamesAPI\\Database\\obj\\",
+        "outputPath": "C:\\Code\\Web\\C#\\GamesAPI\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrpug\\AppData\\Roaming\\NuGet\\NuGet.Config",

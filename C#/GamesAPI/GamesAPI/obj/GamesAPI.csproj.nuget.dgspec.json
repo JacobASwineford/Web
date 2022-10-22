@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj": {}
+    "C:\\Code\\Web\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj": {}
   },
   "projects": {
-    "C:\\C#\\GamesAPI\\Database\\Database.csproj": {
+    "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#\\GamesAPI\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\C#\\GamesAPI\\Database\\Database.csproj",
+        "projectPath": "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj",
         "packagesPath": "C:\\Users\\mrpug\\.nuget\\packages\\",
-        "outputPath": "C:\\C#\\GamesAPI\\Database\\obj\\",
+        "outputPath": "C:\\Code\\Web\\C#\\GamesAPI\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrpug\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj": {
+    "C:\\Code\\Web\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj",
+        "projectUniqueName": "C:\\Code\\Web\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj",
         "projectName": "GamesAPI",
-        "projectPath": "C:\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj",
+        "projectPath": "C:\\Code\\Web\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj",
         "packagesPath": "C:\\Users\\mrpug\\.nuget\\packages\\",
-        "outputPath": "C:\\C#\\GamesAPI\\GamesAPI\\obj\\",
+        "outputPath": "C:\\Code\\Web\\C#\\GamesAPI\\GamesAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrpug\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -93,8 +93,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\C#\\GamesAPI\\Database\\Database.csproj": {
-                "projectPath": "C:\\C#\\GamesAPI\\Database\\Database.csproj"
+              "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj": {
+                "projectPath": "C:\\Code\\Web\\C#\\GamesAPI\\Database\\Database.csproj"
               }
             }
           }

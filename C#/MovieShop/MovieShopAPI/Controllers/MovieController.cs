@@ -42,7 +42,8 @@ namespace MovieShopAPI.Controllers
         [Route("getG/{genreName}")]
         public async Task<IActionResult> GetByGenre(string genreName)
         {
-            var r = await movieService.
+            var r = await trailerService.GetTrailerByMovie(1);
+            return Ok(r);
         }
 
         [HttpGet]

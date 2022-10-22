@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kk04u+c8Z3HicY95Ebamu54UmhEcQubjLJcNonPsAA8Chk5JD5ICSieAF7LcMW5AFAxvuKuJRBKGXIsmjFmi8Q==",
+  "dgSpecHash": "Bc8Q++PlGLE1VmMDRB5mIn3Bzzn/QxL4Y/vX0fZX88US2ye5nWeoZ7iNtrsO+f96hmJ0zhy4e1hR0xkh75T79g==",
   "success": true,
-  "projectFilePath": "C:\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj",
+  "projectFilePath": "C:\\Code\\Web\\C#\\GamesAPI\\GamesAPI\\GamesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrpug\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\mrpug\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

@@ -7005,11 +7005,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#\\MovieShop\\MovieShopAPI\\MovieShopAPI.csproj",
+      "projectUniqueName": "C:\\Code\\Web\\C#\\MovieShop\\MovieShopAPI\\MovieShopAPI.csproj",
       "projectName": "MovieShopAPI",
-      "projectPath": "C:\\C#\\MovieShop\\MovieShopAPI\\MovieShopAPI.csproj",
+      "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\MovieShopAPI\\MovieShopAPI.csproj",
       "packagesPath": "C:\\Users\\mrpug\\.nuget\\packages\\",
-      "outputPath": "C:\\C#\\MovieShop\\MovieShopAPI\\obj\\",
+      "outputPath": "C:\\Code\\Web\\C#\\MovieShop\\MovieShopAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mrpug\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7026,11 +7026,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\C#\\MovieShop\\Core\\Core.csproj": {
-              "projectPath": "C:\\C#\\MovieShop\\Core\\Core.csproj"
+            "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj": {
+              "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj"
             },
-            "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Code\\Web\\C#\\MovieShop\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

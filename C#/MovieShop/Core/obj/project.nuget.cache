@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LUXjkmqHQrbNWRcs47k2NyYPTZqt5t2qlQejBGsDq0N5YOkMntpnGH6idM9cufqBgG/w7l3fdiDmNVJ5+PVK2g==",
+  "dgSpecHash": "Qri15gORENhISvZenZ00/6nZfp2hCpeUL9PCjOcWbc24OIDstL1WZyKBIoC/Tx3EhZP18MQC/RwAzcCZ5bc6sw==",
   "success": true,
-  "projectFilePath": "C:\\C#\\MovieShop\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Code\\Web\\C#\\MovieShop\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrpug\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mrpug\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
