@@ -4,11 +4,13 @@
   }
 
   .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(241, 25, 25, 0.652);
     padding: 20px;
+    border: 2px solid black;
   }
 
   .student-selection {
@@ -17,14 +19,15 @@
   }
 
   .student-header {
-    display: block;
+    position: absolute;
+    display: inline-block;
     background-color: gold;
     padding: 5px;
     border: 2px solid rgba(0, 0, 0, 0.577);
     margin-top: 5px;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
   }
 
   .subject-container {
@@ -39,7 +42,11 @@
 
 <div class="header">
   <h1>Gradebook</h1>
+  <div class="student-header">
+    <h2>{{studentHeaderName}}</h2>
+  </div>
   <div>
+    
     <div class="student-selection">
       <h3 style="margin: 0px; margin-right: 10px;">Student:</h3>
       <input list="students" name="students" id="student-selection" [(ngModel)]="studentFullName" style="margin-right: 10px;">
@@ -50,9 +57,7 @@
   </div>
 </div>
 
-<div class="student-header">
-  <h2>{{studentHeaderName}}</h2>
-</div>
+
 
 <div class="subject-container">
   <app-subject-info *ngFor="let subject of sa" subject="{{subject}}"></app-subject-info>
