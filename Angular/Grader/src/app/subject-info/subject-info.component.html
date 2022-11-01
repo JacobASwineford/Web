@@ -1,0 +1,32 @@
+<style>
+.subject-banner {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border: solid black;
+    background-color: rgba(128, 128, 128, 0.499);
+}
+
+.subject-banner:hover {
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.info-box {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-top: 0;
+}
+</style>
+
+<li class="subject-banner" (click)="show()">
+    <h2>{{subject}}</h2>
+</li>
+
+<div id='info-{{subject}}' class="info-box">
+    <h2>{{subject}} Grade: 50</h2>
+    <h3>Class Grade: 70</h3>
+    <h4>Assignments Done: 20 / 21</h4>
+</div>
+

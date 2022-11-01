@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { CourseModel } from './models/CourseModel';
 import { StudentModel } from './models/StudentModel';
 import { StudentService } from './services/student.service';
 
@@ -11,18 +11,16 @@ import { StudentService } from './services/student.service';
 
 export class AppComponent {
 
-  title = "Grader";
+  title:string = "Grader";
+
+  infoShown:boolean = false;
 
   arr:any = [];
+  sa:any = [];
 
   studentModel:StudentModel = new StudentModel;
-  
-
   studentFullName:string = "";
-  studentForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl('')
-  })
+  studentHeaderName:string = "No Student Selected";
 
   constructor(private studentService:StudentService) {}
 
@@ -32,13 +30,23 @@ export class AppComponent {
       this.arr = data;
       this.arr.forEach((element: StudentModel) => {
         if (el != null)
-    el.innerHTML += `<option value='${element.firstName} ${element.lastName}'></option>`;
+          el.innerHTML += `<option value='${element.firstName} ${element.lastName}'></option>`;
       });
-    })
+    });
   }
 
   squery() {
-    console.log(this.studentFullName);
+    this.studentHeaderName = this.studentFullName;
+
+    let index = 0;
+    this.studentService.getStudentCourses(this.studentFullName).subscribe(data => {
+      this.arr = data;
+      this.sa = []
+      this.arr.forEach((element: CourseModel) => {
+        this.sa[index++] = element.name;
+      });
+    });
+
     this.studentFullName = "";
   }
 }

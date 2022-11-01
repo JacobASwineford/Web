@@ -16,26 +16,23 @@
     font-size: 22px;
   }
 
-  .container {
+  .student-header {
+    display: block;
+    background-color: gold;
+    padding: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.577);
+    margin-top: 5px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subject-container {
     display: flex;
-    justify-content: space-around;
-    background-color: rgb(215, 215, 215);
-  }
-
-  .information-box {
-    border-top: 0;
-    border-bottom: 0;
-    border-color: rgb(74, 74, 74);
-    border-style: solid;
-    width: 200px;
-    margin: 20px;
-    padding: 10px;
-    font-size: large;
-    font-weight: bold;
-  }
-
-  .assignment-box {
-    margin: 20px;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 </style>
@@ -48,30 +45,17 @@
       <input list="students" name="students" id="student-selection" [(ngModel)]="studentFullName" style="margin-right: 10px;">
       <datalist id="students">
       </datalist>
-      <button type="submit" (click)="squery()">Get</button>
+      <button type="submit" (click)="squery()" >Get</button>
     </div>
   </div>
 </div>
 
-
-
-
-
-<!-- List of subjects -->
-<h2>English</h2>
-<div class="container">
-  <div class="information-box">
-    Individual: 
-    <br>
-    Class:
-  </div>
-  <div class="assignment-box">
-    <label for="assignments">Assignments</label>
-    <input list="assignments" name="assignments" id="assignment-selection">
-    <datalist id="assignments">
-      <option value="junk: 1"></option>
-    </datalist>
-  </div>
-  
+<div class="student-header">
+  <h2>{{studentHeaderName}}</h2>
 </div>
+
+<div class="subject-container">
+  <app-subject-info *ngFor="let subject of sa" subject="{{subject}}"></app-subject-info>
+</div>
+
 
