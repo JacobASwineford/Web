@@ -9,6 +9,7 @@ import { Input } from '@angular/core'
 export class SubjectInfoComponent implements OnInit {
 
   @Input() subject:string = '';
+  @Input() section:string = '';
 
   constructor() { }
 

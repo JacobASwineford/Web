@@ -21,6 +21,4 @@ export class StudentService {
     var l = arr[1];
     return this.client.get(`https://localhost:7285/student/get/${f}.${l}/courses`);
   }
-
-
 }

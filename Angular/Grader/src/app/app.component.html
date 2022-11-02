@@ -60,7 +60,8 @@
 
 
 <div class="subject-container">
-  <app-subject-info *ngFor="let subject of sa" subject="{{subject}}"></app-subject-info>
+  <app-subject-info *ngFor="let subject of sa; let i=index;" subject="{{subject}}" section="{{seca[i]}}">
+  </app-subject-info>
 </div>
 
 

@@ -17,6 +17,7 @@ export class AppComponent {
 
   arr:any = [];
   sa:any = [];
+  seca:any = [];
 
   studentModel:StudentModel = new StudentModel;
   studentFullName:string = "";
@@ -43,7 +44,8 @@ export class AppComponent {
       this.arr = data;
       this.sa = []
       this.arr.forEach((element: CourseModel) => {
-        this.sa[index++] = element.name;
+        this.sa[index] = element.name;
+        this.seca[index++] = element.section;
       });
     });
 
