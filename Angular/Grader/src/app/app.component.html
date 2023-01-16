@@ -40,7 +40,8 @@
 
 </style>
 
-<div class="header">
+<!--
+  <div class="header">
   <h1>Gradebook</h1>
   <div class="student-header">
     <h2>{{studentHeaderName}}</h2>
@@ -56,15 +57,28 @@
     </div>
   </div>
 </div>
+-->
 
 
 
-<div class="subject-container">
+
+<!--
+  <div class="subject-container">
   <app-subject-info *ngFor="let subject of sa; let i=index;" subject="{{subject}}" section="{{seca[i]}}">
   </app-subject-info>
 </div>
 
 <app-header></app-header>
 <router-outlet></router-outlet>
+-->
+
+<!--
+<student-list></student-list>
+<br><br><br>
+<class-list></class-list>
+-->
+
+<sidebar></sidebar>
+
 
 

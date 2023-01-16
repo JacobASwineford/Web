@@ -3,7 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  APIUrl: "https://localhost:7285",
+  APIRoutes: {
+    course: "/course",
+    student: "/student"
+  },
+  APISubRoutes: {
+    all: "/all",
+    get: "/get",
+    post: "/post",
+    put: "/put",
+    delete: "/delete",
+    courses: "/courses"
+  }
 };
 
 /*

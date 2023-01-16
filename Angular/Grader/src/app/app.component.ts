@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CourseModel } from './models/CourseModel';
 import { StudentModel } from './models/StudentModel';
-import { StudentService } from './services/student.service';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +10,11 @@ import { StudentService } from './services/student.service';
 
 export class AppComponent {
 
-  title:string = "Grader";
+  title = "Grader";
 
-  infoShown:boolean = false;
-
+  students:StudentModel[] = [];
   arr:any = [];
+
   sa:any = [];
   seca:any = [];
 
@@ -23,31 +22,36 @@ export class AppComponent {
   studentFullName:string = "";
   studentHeaderName:string = "No Student Selected";
 
-  constructor(private studentService:StudentService) {}
+  constructor() {}
 
   ngOnInit() {
     const el = document.getElementById('students');
-    this.studentService.getAllStudents().subscribe(data => {
-      this.arr = data;
-      this.arr.forEach((element: StudentModel) => {
-        if (el != null)
-          el.innerHTML += `<option value='${element.firstName} ${element.lastName}'></option>`;
-      });
-    });
+    // this.studentService.getAllStudents().subscribe(data => {
+
+    //   this.arr = data;
+    //   let i = 0;
+    //   this.arr.forEach((student: StudentModel) => {
+    //       if (el == null) return;
+    //       this.students[i++] = student;
+    //       el.innerHTML = `<option value='${student.firstName} ${student.lastName} [${student.id}]'>`;
+    //   });
+
+    //   this.arr = [];
+    // });
   }
 
   squery() {
     this.studentHeaderName = this.studentFullName;
 
     let index = 0;
-    this.studentService.getStudentCourses(this.studentFullName).subscribe(data => {
-      this.arr = data;
-      this.sa = []
-      this.arr.forEach((element: CourseModel) => {
-        this.sa[index] = element.name;
-        this.seca[index++] = element.section;
-      });
-    });
+    // this.studentService.getStudentCourses(this.studentFullName).subscribe(data => {
+    //   this.arr = data;
+    //   this.sa = []
+    //   this.arr.forEach((element: CourseModel) => {
+    //     this.sa[index] = element.name;
+    //     this.seca[index++] = element.section;
+    //   });
+    // });
 
     this.studentFullName = "";
   }

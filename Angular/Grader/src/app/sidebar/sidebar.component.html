@@ -1,0 +1,96 @@
+<style>
+    .bar {
+        background-color: rgba(126, 7, 165, 0.448);
+        height: 100%;
+        width: 20%;
+        border-right: 3px solid black;
+    }
+
+    .bar-form {
+        display: flex;
+        padding: 10px;
+        justify-content: space-around;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    .bar-list {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        background-color: transparent;
+        border-right: 3px solid black;
+        border-left: 3px solid black;
+        padding: 15px;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .bar-button {
+        display: flex;
+        background-color: transparent;
+        height: 50px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    .bar-button-background {
+        position: relative;
+        width: 95%;
+        height: 80%;
+        margin: auto;
+        font-weight: 600;
+        text-align: center;
+        font-size: .6em;
+        border: none;
+        background-color: transparent;
+    }
+
+    .bar-button-background:hover {
+        background-color: rgba(168, 165, 165, 0.33);
+    }
+
+</style>
+
+<div class="bar">
+    <form submit="change(sort)" class="bar-form">
+        <label for="sort" name="sortlabel">Sort by:</label>
+        <select name="sort" id="sort" (change)="toValue($event)" style="font-size: .5em;">
+            <option value="Classes">Classes</option>
+            <option value="Students">Students</option>
+        </select>
+    </form>
+    <hr style="width: 95%; border-color: rgba(0, 0, 0, 0.605);">
+    <br>
+    <div class="bar-list">
+        <div *ngFor="let item of navItems" class="bar-button">
+            <button type="button" class="bar-button-background" value="adasdasd">{{item}}</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+<div class="class-list">
+    Classes
+    <div class="class-button">
+        <button class="class-button-background">
+            Class Name #1
+        </button>
+    </div>
+    <div class="class-button">
+        <button class="class-button-background">
+            Class Name #2
+        </button>
+    </div>
+</div>
+
+  <div class="subject-container">
+  <app-subject-info *ngFor="let subject of sa; let i=index;" subject="{{subject}}" section="{{seca[i]}}">
+  </app-subject-info>
+</div>
+
+<app-header></app-header>
+<router-outlet></router-outlet>
+-->
