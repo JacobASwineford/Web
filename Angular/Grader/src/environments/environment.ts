@@ -7,7 +7,8 @@ export const environment = {
   APIUrl: "https://localhost:7285",
   APIRoutes: {
     course: "/course",
-    student: "/student"
+    student: "/student",
+    assignment: "/assignment"
   },
   APISubRoutes: {
     all: "/all",
