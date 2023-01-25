@@ -8,7 +8,9 @@ export const environment = {
   APIRoutes: {
     course: "/course",
     student: "/student",
-    assignment: "/assignment"
+    assignment: "/assignment",
+    score: "/score",
+    studentCourseAssignment: "/studentCourseAssignment"
   },
   APISubRoutes: {
     all: "/all",

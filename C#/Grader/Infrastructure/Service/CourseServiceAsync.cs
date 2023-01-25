@@ -14,6 +14,8 @@ namespace Infrastructure.Service
 {
     public class CourseServiceAsync : ICourseServiceAsync
     {
+
+
         /**
          * Returns an enumerable list of Course from the Grader database.
          */
@@ -25,30 +27,6 @@ namespace Infrastructure.Service
             IEnumerable<Course> courses = await conn.QueryAsync<Course>(sql);
             conn.Close();
             return courses;
-        }
-
-        /**
-         * Creates a course in the Grader database.
-         */
-        public Task<int> CreateCourseAsync(Course course)
-        {
-            throw new NotImplementedException();
-        }
-
-        /**
-         * Updates a course in the Grader database with the given Course object.
-         */
-        public Task<int> UpdateCourseAsync(Course course)
-        {
-            throw new NotImplementedException();
-        }
-
-        /**
-         * Deletes a course in the Grader database.
-         */
-        public Task<int> DeleteCourseAsync(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

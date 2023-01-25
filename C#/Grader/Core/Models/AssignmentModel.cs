@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using Core.Contracts;
+using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,21 +12,21 @@ namespace Core.Models
 {
     public class AssignmentModel
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public double Outof { get; set; }
         public string? Name { get; set; }
         public int CourseId { get; set; }
 
         public static IEnumerable<AssignmentModel> ToList(IEnumerable<Assignment> list) {
-            IEnumerable<AssignmentModel> result = new List<AssignmentModel>();
+            List<AssignmentModel> assignments = new();
             foreach (Assignment assignment in list)
-                result.Append(FromEntity(assignment));
-            return result;
+                assignments.Add(FromEntity(assignment));
+            return assignments.AsEnumerable();
         }
 
         public static AssignmentModel FromEntity(Assignment assignment) {
             AssignmentModel model = new AssignmentModel();
-            model.id = assignment.Id;
+            model.Id = assignment.Id;
             model.Outof = assignment.OutOf;
             model.Name = assignment.Name;
             model.CourseId = assignment.CourseId;
@@ -34,7 +35,7 @@ namespace Core.Models
 
         public static Assignment ToEntity(AssignmentModel model) {
             Assignment assignment = new Assignment();
-            assignment.Id = model.id;
+            assignment.Id = model.Id;
             assignment.OutOf = model.Outof;
             assignment.Name = model.Name;
             assignment.CourseId = model.CourseId;

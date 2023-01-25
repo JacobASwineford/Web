@@ -10,12 +10,9 @@ namespace Core.Contracts.Service
 {
     public interface IStudentServiceAsync
     {
+        /**
+         * Asynchronously gets all the students present in the grader database.
+         */
         Task<IEnumerable<Student>> GetAllStudentsAsync();
-        Task<int> EnrollStudentAsync(Student student);
-        Task<int> UpdateStudentAsync(Student student);
-        Task<int> DeleteStudentAsync(int id);
-        Task<IEnumerable<Course>> GetStudentCoursesAsync(int id);
-        Task<int> AssignAsync(int studentId, int courseId);
-        Task<int> DesignAsync(int studentId, int courseId);
     }
 }

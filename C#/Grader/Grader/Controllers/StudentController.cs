@@ -11,12 +11,14 @@ namespace Grader.Controllers
     public class StudentController : Controller
     {
         private readonly IStudentServiceAsync service;
+        private readonly GenericRepositoryAsync<Student> gen;
 
         /**
          * Constructor to initilize services, via dependency injection.
          */
-        public StudentController(IStudentServiceAsync ss) {
-            service = ss;
+        public StudentController(IStudentServiceAsync service, DBC context) {
+            this.service = service;
+            gen = new GenericRepositoryAsync<Student>(context);
         }
 
         /**
@@ -27,7 +29,7 @@ namespace Grader.Controllers
         public async Task<IActionResult> GetAll() {
             try {
                 var r = await service.GetAllStudentsAsync();
-                return Ok(r);
+                return Ok(StudentModel.ToList(r));
             }
             catch (Exception e) {
                 return BadRequest(e.Message);
@@ -39,9 +41,9 @@ namespace Grader.Controllers
          */
         [HttpPost]
         [Route("post")]
-        public async Task<IActionResult> Enroll([FromBody] StudentModel student) {
+        public async Task<IActionResult> Post([FromBody] StudentModel student) {
             try {
-                var r = await service.EnrollStudentAsync(StudentModel.ToEntity(student));
+                var r = await gen.PostAsync(StudentModel.ToEntity(student));
                 return Ok(r);
             }
             catch (Exception e) {
@@ -56,9 +58,9 @@ namespace Grader.Controllers
          */
         [HttpPut]
         [Route("put")]
-        public async Task<IActionResult> Change([FromBody] StudentModel student) {
+        public async Task<IActionResult> Put([FromBody] StudentModel student) {
             try {
-                var r = await service.UpdateStudentAsync(StudentModel.ToEntity(student)); // assumes student model is same as student
+                var r = await gen.PutAsync(StudentModel.ToEntity(student));
                 return Ok(r);
             }
             catch (Exception e) {
@@ -73,23 +75,7 @@ namespace Grader.Controllers
         [Route("delete")]
         public async Task<IActionResult> Delete(int studentId) {
             try {
-                var r = await service.DeleteStudentAsync(studentId);
-                return Ok(r);
-            }
-            catch (Exception e) {
-                return BadRequest(e.Message);
-            }
-        }
-
-        /**
-         * Gets the students courses, which correspond to the given student's id
-         */
-        [HttpGet]
-        [Route("courses")]
-        public async Task<IActionResult> GetCourses(int id)
-        {
-            try {
-                var r = await service.GetStudentCoursesAsync(id);
+                var r = await gen.DeleteAsync(studentId);
                 return Ok(r);
             }
             catch (Exception e) {

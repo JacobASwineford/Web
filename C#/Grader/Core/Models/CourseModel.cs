@@ -15,11 +15,10 @@ namespace Core.Models
         public string? Section { get; set; }
 
         public static IEnumerable<CourseModel> ToList(IEnumerable<Course> list) {
-            IEnumerable<CourseModel> result = new List<CourseModel>();
-            foreach (Course course in list) {
-                result.Append(FromEntity(course));
-            }
-            return result;
+            List<CourseModel> courses = new();
+            foreach (Course course in list)
+                courses.Add(FromEntity(course));
+            return courses.AsEnumerable();
         }
 
         public static CourseModel FromEntity(Course course) {

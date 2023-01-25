@@ -186,10 +186,6 @@ namespace Infrastructure.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Section")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 

@@ -15,10 +15,10 @@ namespace Core.Models
         public string? LastName { get; set; }
 
         public static IEnumerable<StudentModel> ToList(IEnumerable<Student> list) {
-            IEnumerable<StudentModel> result = new List<StudentModel>();
+            List<StudentModel> students = new List<StudentModel>();
             foreach (Student student in list)
-                result.Append(FromEntity(student));
-            return result;
+                students.Add(FromEntity(student));
+            return students.AsEnumerable();
         }
 
         public static StudentModel FromEntity(Student student) {

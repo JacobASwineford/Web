@@ -27,6 +27,10 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFramework
 
 builder.Services.AddScoped<IStudentServiceAsync, StudentServiceAsync>();
 builder.Services.AddScoped<ICourseServiceAsync, CourseServiceAsync>();
+builder.Services.AddScoped<IAssignmentServiceAsync, AssignmentServiceAsync>();
+builder.Services.AddScoped<IScoreServiceAsync, ScoreServiceAsync>();
+builder.Services.AddScoped<IStudentCourseAssignmentServiceAsync,
+    StudentCourseAssignmentServiceAsync>();
 
 var app = builder.Build();
 

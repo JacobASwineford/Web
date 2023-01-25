@@ -18,7 +18,5 @@ namespace Core.Entities
         [ForeignKey("Course")]
         public int CourseId { get; set; }
         public Course? Course { get; set; }
-
-        public char Section { get; set; }
     }
 }

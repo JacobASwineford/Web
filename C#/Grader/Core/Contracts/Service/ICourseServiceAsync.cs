@@ -10,9 +10,9 @@ namespace Core.Contracts.Service
 {
     public interface ICourseServiceAsync
     {
+        /**
+         * Asynchronously gets all the courses present in the grader database.
+         */
         Task<IEnumerable<Course>> GetAllCoursesAsync();
-        Task<int> CreateCourseAsync(Course course);
-        Task<int> UpdateCourseAsync(Course course);
-        Task<int> DeleteCourseAsync(int id);
     }
 }
